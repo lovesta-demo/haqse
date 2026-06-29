@@ -1,0 +1,299 @@
+{
+  "schemes": [
+    {
+      "id": "pm-jay",
+      "name": "PM-JAY (Ayushman Bharat)",
+      "shortDesc": "Health insurance scheme for eligible families (₹5 lakh coverage)",
+      "central": {
+        "ministry": "Ministry of Labour and Employment",
+        "portal": "https://pmjay.gov.in",
+        "helpline": "1800-111-555",
+        "email": "support@pmjay.gov.in",
+        "contactPerson": "National Health Authority (NHA)",
+        "designation": "Scheme Administrator"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Dr. Rajesh Kumar",
+          "designation": "State Health Mission Director",
+          "phone": "0172-3921234",
+          "email": "nodal.officer.hr@pmjay.gov.in",
+          "statePortal": "https://haryana.pmjay.gov.in",
+          "districtCoordinator": "Rajesh Sharma (Gurugram)",
+          "coordinatorPhone": "0124-4567890"
+        },
+        "UP": {
+          "state": "Uttar Pradesh",
+          "nodalOfficer": "Dr. Priya Verma",
+          "designation": "State Mission Director",
+          "phone": "0522-2234567",
+          "email": "nodal.officer.up@pmjay.gov.in",
+          "statePortal": "https://up.pmjay.gov.in",
+          "districtCoordinator": "Amit Singh (Lucknow)",
+          "coordinatorPhone": "0522-4123456"
+        },
+        "DL": {
+          "state": "Delhi",
+          "nodalOfficer": "Dr. Anjali Sharma",
+          "designation": "State Director",
+          "phone": "011-4567891",
+          "email": "nodal.officer.dl@pmjay.gov.in",
+          "statePortal": "https://delhi.pmjay.gov.in",
+          "districtCoordinator": "Vikram Patel (Central)",
+          "coordinatorPhone": "011-2341234"
+        },
+        "UK": {
+          "state": "Uttarakhand",
+          "nodalOfficer": "Deepak Goyal",
+          "designation": "State Nodal Officer",
+          "phone": "0135-2671111",
+          "email": "nodal.officer.uk@pmjay.gov.in",
+          "statePortal": "https://uttarakhand.pmjay.gov.in",
+          "districtCoordinator": "Ramesh Kumar (Dehradun)",
+          "coordinatorPhone": "0135-2456789"
+        }
+      }
+    },
+    {
+      "id": "nrega",
+      "name": "NREGA (Mahatma Gandhi Employment Guarantee)",
+      "shortDesc": "100 days guaranteed employment for rural laborers per financial year",
+      "central": {
+        "ministry": "Ministry of Rural Development",
+        "portal": "https://nrega.nic.in",
+        "helpline": "1800-110-707",
+        "email": "support@nrega.nic.in",
+        "contactPerson": "Dr. Sanjay Kumar",
+        "designation": "NREGA Director General"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Suresh Babu",
+          "designation": "State NREGA Mission Director",
+          "phone": "0172-2711234",
+          "email": "nrega.haryana@nic.in",
+          "statePortal": "https://haryana.nrega.nic.in",
+          "districtCoordinator": "Kiran Sharma (Faridabad)",
+          "coordinatorPhone": "0129-4123456"
+        },
+        "UK": {
+          "state": "Uttarakhand",
+          "nodalOfficer": "Vikram Singh",
+          "designation": "State Project Director",
+          "phone": "0135-2671122",
+          "email": "nrega.uttarakhand@nic.in",
+          "statePortal": "https://uttarakhand.nrega.nic.in",
+          "districtCoordinator": "Priya Negi (Champawat)",
+          "coordinatorPhone": "05938-240567"
+        },
+        "UP": {
+          "state": "Uttar Pradesh",
+          "nodalOfficer": "Ashok Srivastava",
+          "designation": "State Director MNREGA",
+          "phone": "0522-2341567",
+          "email": "nrega.up@nic.in",
+          "statePortal": "https://up.nrega.nic.in",
+          "districtCoordinator": "Rani Kumari (Varanasi)",
+          "coordinatorPhone": "0542-2123456"
+        }
+      }
+    },
+    {
+      "id": "pmay",
+      "name": "Pradhan Mantri Awas Yojana (Housing for All)",
+      "shortDesc": "Housing assistance for economically weaker & lower-income groups",
+      "central": {
+        "ministry": "Ministry of Housing and Urban Affairs",
+        "portal": "https://pmaymis.gov.in",
+        "helpline": "1800-11-3377",
+        "email": "support@pmay.gov.in",
+        "contactPerson": "Sanjay Bhatia",
+        "designation": "National Project Director"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Ravi Khatri",
+          "designation": "State PMAY Nodal Officer",
+          "phone": "0172-2567890",
+          "email": "pmay.haryana@gov.in",
+          "statePortal": "https://haryana.pmay.gov.in",
+          "districtCoordinator": "Neha Sharma (Gurugram)",
+          "coordinatorPhone": "0124-5678901"
+        },
+        "UK": {
+          "state": "Uttarakhand",
+          "nodalOfficer": "Arun Kumar",
+          "designation": "State Housing Commissioner",
+          "phone": "0135-2671100",
+          "email": "pmay.uk@gov.in",
+          "statePortal": "https://uk.pmay.gov.in",
+          "districtCoordinator": "Anita Verma (Almora)",
+          "coordinatorPhone": "05962-240122"
+        }
+      }
+    },
+    {
+      "id": "sukanya-samriddhi",
+      "name": "Sukanya Samriddhi Yojana (Girl Child Savings)",
+      "shortDesc": "High-interest savings scheme for girl child education & marriage",
+      "central": {
+        "ministry": "Ministry of Women & Child Development",
+        "portal": "https://wcd.nic.in",
+        "helpline": "1800-180-1111",
+        "email": "support@sukanya.gov.in",
+        "contactPerson": "Dr. Rashmi Singh",
+        "designation": "Scheme Head"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Preeti Malik",
+          "designation": "State WCD Director",
+          "phone": "0172-3912345",
+          "email": "sukanya.hr@nic.in",
+          "statePortal": "https://haryana.wcd.nic.in",
+          "districtCoordinator": "Sunita Devi (Faridabad)",
+          "coordinatorPhone": "0129-5123456"
+        }
+      }
+    },
+    {
+      "id": "bpl-registry",
+      "name": "Below Poverty Line (BPL) Registry & Social Assistance",
+      "shortDesc": "Identification & eligibility for various poverty alleviation schemes",
+      "central": {
+        "ministry": "Ministry of Rural Development",
+        "portal": "https://secc.nic.in",
+        "helpline": "1800-11-7007",
+        "email": "support@secc.nic.in",
+        "contactPerson": "Rajesh Joshi",
+        "designation": "SECC Director"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Meera Sharma",
+          "designation": "State Social Welfare Director",
+          "phone": "0172-2671234",
+          "email": "bpl.hr@nic.in",
+          "statePortal": "https://haryana.secc.nic.in",
+          "districtCoordinator": "Rajat Singh (Gurugram)",
+          "coordinatorPhone": "0124-4567123"
+        },
+        "UK": {
+          "state": "Uttarakhand",
+          "nodalOfficer": "Harish Joshi",
+          "designation": "State BPL Nodal Officer",
+          "phone": "0135-2671111",
+          "email": "bpl.uk@nic.in",
+          "statePortal": "https://uk.secc.nic.in",
+          "districtCoordinator": "Kavya Negi (Champawat)",
+          "coordinatorPhone": "05938-241234"
+        }
+      }
+    },
+    {
+      "id": "old-age-pension",
+      "name": "National Social Assistance Programme - Old Age Pension",
+      "shortDesc": "Monthly pension for citizens above 60 years (≥BPL status)",
+      "central": {
+        "ministry": "Ministry of Rural Development",
+        "portal": "https://nsap.nic.in",
+        "helpline": "1800-180-1111",
+        "email": "support@nsap.nic.in",
+        "contactPerson": "Dr. Vinod Kumar",
+        "designation": "NSAP Administrator"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Savitri Devi",
+          "designation": "State NSAP Coordinator",
+          "phone": "0172-2567890",
+          "email": "pension.hr@nic.in",
+          "statePortal": "https://haryana.nsap.nic.in",
+          "districtCoordinator": "Geeta Kumari (Faridabad)",
+          "coordinatorPhone": "0129-4123987"
+        }
+      }
+    },
+    {
+      "id": "scholarships",
+      "name": "Scholarship Schemes (Education Assistance)",
+      "shortDesc": "Central & state scholarships for SC/ST/OBC/EBC/General students",
+      "central": {
+        "ministry": "Ministry of Education (Department of Higher Education & School Education)",
+        "portal": "https://scholarships.gov.in",
+        "helpline": "1800-212-7537",
+        "email": "support@scholarships.gov.in",
+        "contactPerson": "Priya Sharma",
+        "designation": "Scholarship Portal Director"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Dr. Vineet Kumar",
+          "designation": "State Scholarship Officer",
+          "phone": "0172-3912121",
+          "email": "scholarships.hr@nic.in",
+          "statePortal": "https://haryana.scholarships.gov.in",
+          "districtCoordinator": "Anjali Singh (Gurugram)",
+          "coordinatorPhone": "0124-5123456"
+        }
+      }
+    },
+    {
+      "id": "eshram",
+      "name": "e-Shram Portal (Worker Registration & Benefits)",
+      "shortDesc": "Digital registration for unorganized workers to access social security",
+      "central": {
+        "ministry": "Ministry of Labour and Employment",
+        "portal": "https://eshram.gov.in",
+        "helpline": "1800-110-595",
+        "email": "support@eshram.gov.in",
+        "contactPerson": "Anil Swarup",
+        "designation": "e-Shram Project Director"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Deepak Sharma",
+          "designation": "State Labour Commissioner",
+          "phone": "0172-2567123",
+          "email": "eshram.hr@nic.in",
+          "statePortal": "https://haryana.eshram.gov.in",
+          "districtCoordinator": "Mohan Singh (Gurugram)",
+          "coordinatorPhone": "0124-4123567"
+        }
+      }
+    },
+    {
+      "id": "pmegp",
+      "name": "PMEGP (Self-Employment & Business Schemes)",
+      "shortDesc": "Subsidy & loans for starting micro-enterprises under PM Employment Generation",
+      "central": {
+        "ministry": "Ministry of MSME (Micro, Small & Medium Enterprises)",
+        "portal": "https://pmegp.gov.in",
+        "helpline": "1800-180-6060",
+        "email": "support@pmegp.gov.in",
+        "contactPerson": "Ramesh Kumar",
+        "designation": "PMEGP Mission Director"
+      },
+      "states": {
+        "HR": {
+          "state": "Haryana",
+          "nodalOfficer": "Saurabh Malik",
+          "designation": "State PMEGP Nodal Officer",
+          "phone": "0172-3912567",
+          "email": "pmegp.hr@nic.in",
+          "statePortal": "https://haryana.pmegp.gov.in",
+          "districtCoordinator": "Pankaj Sharma (Gurugram)",
+          "coordinatorPhone": "0124-5678012"
+        }
+      }
+    }
+  ]
+}
