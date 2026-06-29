@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HaqSe - Free Legal Awareness Platform | Police Rights, Loans, GST, CIBIL, Cheque Bounce</title>
+  <meta name="description" content="HaqSe: Free legal awareness platform for Indian citizens. Learn about police arrest rights, loan harassment, GST fraud, CIBIL repair, cheque bounce laws.">
+  <meta property="og:title" content="HaqSe - Free Legal Guides for Indian Citizens">
+  <meta property="og:description" content="Know your legal rights: Police arrest, loan harassment, GST fraud, CIBIL repair, cheque bounce.">
+  <meta property="og:url" content="https://haqse.org.in/">
+  
+  <!-- SITEMAP & SEO -->
+  <link rel="sitemap" type="application/xml" href="https://haqse.org.in/sitemap.xml">
+  <link rel="alternate" hreflang="hi" href="https://haqse.org.in/">
+  
+  <!-- GOOGLE ADSENSE CODE -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1287762983401841"
+     crossorigin="anonymous"></script>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0A1628;
+      color: #CBD5E1;
+      line-height: 1.8;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0A1628, #162040);
+      border-bottom: 3px solid #FF6B00;
+      margin-bottom: 30px;
+      border-radius: 0 0 12px 12px;
+    }
+    
+    .logo {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+    
+    .logo-o { color: #FF6B00; }
+    .logo-g { color: #00A651; }
+    
+    .tagline {
+      font-size: 14px;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .tabs-container {
+      display: flex;
+      gap: 10px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 10px;
+    }
+    
+    .tab-button {
+      padding: 12px 20px;
+      border: 2px solid #FF6B00;
+      background: transparent;
+      color: #FFB74D;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    
+    .tab-button:hover {
+      background: rgba(255, 107, 0, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    .tab-button.active {
+      background: #FF6B00;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .breadcrumb {
+      color: #64748B;
+      font-size: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .breadcrumb a {
+      color: #FFB74D;
+      text-decoration: none;
+    }
+    
+    h1 {
+      font-size: 32px;
+      color: #fff;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid rgba(255, 107, 0, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    h2 {
+      font-size: 20px;
+      color: #fff;
+      margin: 24px 0 12px;
+      padding-top: 16px;
+    }
+    
+    h3 {
+      font-size: 16px;
+      color: #FFB74D;
+      margin: 16px 0 8px;
+    }
+    
+    p {
+      margin-bottom: 14px;
+      color: #CBD5E1;
+      line-height: 1.7;
+    }
+    
+    .intro {
+      font-size: 16px;
+      color: #FFD0A8;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    .highlight-box {
+      background: rgba(255, 107, 0, 0.08);
+      border-left: 4px solid #FF6B00;
+      border-radius: 0 8px 8px 0;
+      padding: 16px;
+      margin: 20px 0;
+    }
+    
+    .success-box {
+      background: rgba(0, 166, 81, 0.08);
+      border-left: 4px solid #00A651;
+      border-radius: 0 8px 8px 0;
+      padding: 16px;
+      margin: 20px 0;
+    }
+    
+    .warning-box {
+      background: rgba(211, 47, 47, 0.08);
+      border-left: 4px solid #EF5350;
+      border-radius: 0 8px 8px 0;
+      padding: 16px;
+      margin: 20px 0;
+    }
+    
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 14px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: #CBD5E1;
+    }
+    
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    th {
+      background: rgba(255, 107, 0, 0.1);
+      padding: 12px;
+      text-align: left;
+      color: #FFB74D;
+      font-weight: 700;
+      border: 1px solid rgba(255, 107, 0, 0.2);
+    }
+    
+    td {
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #CBD5E1;
+    }
+    
+    .step-number {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: #FF6B00;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+    
+    .hotline {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(0, 166, 81, 0.15);
+      border: 1px solid #00A651;
+      border-radius: 6px;
+      color: #00A651;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 5px 5px 5px 0;
+    }
+    
+    footer {
+      background: linear-gradient(135deg, #0A1628, #162040);
+      border-top: 2px solid rgba(255, 107, 0, 0.2);
+      padding: 32px 20px;
+      margin-top: 60px;
+      color: #CBD5E1;
+      font-size: 13px;
+    }
+    
+    .footer-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .footer-section h4 {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    
+    .footer-section ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .footer-section li {
+      margin-bottom: 8px;
+    }
+    
+    .footer-section a {
+      color: #FFB74D;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+    
+    .footer-section a:hover {
+      text-decoration: underline;
+      opacity: 0.8;
+    }
+    
+    /* Email link styling */
+    a[href^="mailto:"] {
+      cursor: pointer !important;
+      pointer-events: auto !important;
+    }
+    
+    .disclaimer-footer {
+      background: rgba(211, 47, 47, 0.1);
+      border: 1px solid rgba(211, 47, 47, 0.3);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 0 auto 16px;
+      font-size: 12px;
+      max-width: 900px;
+    }
+    
+    .disclaimer-footer p {
+      color: #EF9A9A;
+      margin: 8px 0;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .footer-bottom p {
+      margin: 8px 0;
+      color: #64748B;
+      font-size: 11px;
+    }
+    
+    .footer-bottom a {
+      color: #FFB74D !important;
+      text-decoration: none;
+      cursor: pointer !important;
+      pointer-events: auto !important;
+    }
+    
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
+      .tabs-container { gap: 5px; }
+      .tab-button { padding: 10px 14px; font-size: 12px; }
+      .logo { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="logo-o">Haq</span><span class="logo-g">Se</span></div>
+  <div class="tagline">Knowledge Base — Legal Guides</div>
+</header>
+
+<div class="container">
+
+  <!-- TAB BUTTONS -->
+  <div class="tabs-container">
+    <button class="tab-button active" onclick="openTab(event, 'police')">🛡️ Police Rights</button>
+    <button class="tab-button" onclick="openTab(event, 'loan')">🦈 Loan Harassment</button>
+    <button class="tab-button" onclick="openTab(event, 'gst')">💼 GST Fraud</button>
+    <button class="tab-button" onclick="openTab(event, 'cibil')">📊 CIBIL Repair</button>
+    <button class="tab-button" onclick="openTab(event, 'cheque')">⚖️ Cheque Bounce</button>
+    <button class="tab-button" onclick="window.open('hospital-insurance.html', '_blank')">🏥 Hospital & Insurance</button>
+    <button class="tab-button" onclick="window.open('insurance-faq.html', '_blank')">💼 Insurance Claims FAQ</button>
+    <button class="tab-button" onclick="window.open('legal-references.html', '_blank')">📚 Legal References</button>
+  </div>
+
+  <!-- TAB 1: POLICE RIGHTS -->
+  <div id="police" class="tab-content active">
+    <div class="breadcrumb">Home / Knowledge Base / Police Arrest Rights</div>
+    <h1>🛡️ Police Arrest Rights in India (BNSS 2023)</h1>
+    <p class="intro">Police arrest kiya? Aapke paas fundamental rights hain. BNSS 2023 ke under, har nagrik ko 3 zaroori rights hain jab police arrest karte hain. Ye guide poora process samjhata hai — kya hota hai, aapke rights kya hain, aur kya karna chahiye.</p>
+
+    <h2>Your 3 Fundamental Rights (BNSS 2023 Sections 60-62)</h2>
+
+    <div class="success-box">
+      <h3>✅ Right 1: Lawyer Maango (Legal Counsel)</h3>
+      <p>Aap lawyer ke liye maang sakte ho. Police ko deny nahi kar sakte. Agar apna lawyer hai toh usko call karo. Agar nahi toh free lawyer available hai.</p>
+      <p><strong>Hotline:</strong> <a href="tel:15100" class="hotline">15100 (Free Legal Aid)</a></p>
+    </div>
+
+    <div class="success-box">
+      <h3>✅ Right 2: Family/Contact Ko Inform Karo</h3>
+      <p>Police ko batana zaroori hai ki aap arrest ho gaye. Aapka family ya contact person ko notification milni chahiye. Police delay nahi kar sakte.</p>
+    </div>
+
+    <div class="success-box">
+      <h3>✅ Right 3: Medical Examination (24 Hours)</h3>
+      <p>Agar police torture ke suspect ho, toh medical exam ka hak hai. Kisi bhi time demand kar sakte ho. Yeh record banata hai proof ke liye.</p>
+    </div>
+
+    <h2>The 24-Hour Rule (MOST IMPORTANT)</h2>
+    <div class="highlight-box">
+      <p><strong>⚠️ CRITICAL:</strong> Police aapko 24 ghante se zyada hold nahi kar sakte without court permission. Agar 24 hours ho gaye aur court order nahi aaya, toh aap release ho jao.</p>
+      <p><strong>Timeline:</strong></p>
+      <ul>
+        <li>Hour 0: Police arrest karte hain</li>
+        <li>Hour 12: Police ko inform karna zaroori</li>
+        <li>Hour 24: Agar court order nahi, release</li>
+      </ul>
+    </div>
+
+    <h2>6-Step Arrest Process</h2>
+    <ol>
+      <li><span class="step-number">1</span> <strong>Arrest:</strong> Police ko batana zaroori — "Tum arrest ho rahe ho"</li>
+      <li><span class="step-number">2</span> <strong>Inform Family:</strong> 12 hours ke andar family ko notification</li>
+      <li><span class="step-number">3</span> <strong>Medical Exam:</strong> If tortured, demand exam immediately</li>
+      <li><span class="step-number">4</span> <strong>Lawyer:</strong> Lawyer ko call karo ya free legal aid maango</li>
+      <li><span class="step-number">5</span> <strong>Court Appearance:</strong> 24 hours ke andar magistrate ke aage</li>
+      <li><span class="step-number">6</span> <strong>Bail/Release:</strong> Court bail dega ya release karenge</li>
+    </ol>
+
+    <h2>When Can Police Arrest WITHOUT Warrant?</h2>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Situation</th>
+          <th>Can Police Arrest?</th>
+          <th>Your Rights</th>
+        </tr>
+        <tr>
+          <td>Crime in front of police</td>
+          <td>✅ YES</td>
+          <td>Ask for lawyer immediately</td>
+        </tr>
+        <tr>
+          <td>Suspicion only</td>
+          <td>❌ NO (need warrant)</td>
+          <td>Demand written notice</td>
+        </tr>
+        <tr>
+          <td>Serious crime</td>
+          <td>✅ YES (BNSS Section 70)</td>
+          <td>Right to lawyer + inform family</td>
+        </tr>
+        <tr>
+          <td>Minor offense</td>
+          <td>⚠️ MAYBE (depends)</td>
+          <td>Ask for summons instead</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>Word-for-Word Scripts You Can Use</h2>
+    <div class="highlight-box">
+      <p><strong>When arrested:</strong></p>
+      <p>"Mujhe lawyer chahiye. Mera lawyer ko call karo. Agar lawyer nahi hai toh free legal aid chahiye. Mujhe 15100 par call karne do."</p>
+      
+      <p><strong>If tortured:</strong></p>
+      <p>"Mujhe torture kiya ja raha hai. Medical examination chahiye. Iska record banega."</p>
+      
+      <p><strong>Ask for release:</strong></p>
+      <p>"24 ghante ho gaye. Agar court order nahi hai toh mujhe release karo BNSS Section 60 ke under."</p>
+    </div>
+
+    <h2>Emergency Contacts</h2>
+    <p>
+      <a href="tel:15100" class="hotline">📞 15100 - Free Legal Aid (24/7)</a>
+      <a href="tel:1930" class="hotline">📞 1930 - Cyber Crime</a>
+      <a href="tel:100" class="hotline">📞 100 - Police Emergency</a>
+    </p>
+  </div>
+
+  <!-- TAB 2: LOAN HARASSMENT -->
+  <div id="loan" class="tab-content">
+    <div class="breadcrumb">Home / Knowledge Base / Loan App Harassment</div>
+    <h1>🦈 Loan App Harassment - Your Rights (Digital Lending Rules 2025)</h1>
+    <p class="intro">Loan app se harassment? Illegal messages, threats, blackmail? India has NEW rules (2025) to STOP this. Yeh guide samjhata hai: kya illegal hai, kaise report karo, aur compensation kaise pao.</p>
+
+    <h2>What's ILLEGAL Under Digital Lending Rules 2025</h2>
+    <div class="warning-box">
+      <p><strong>❌ These are ALL ILLEGAL:</strong></p>
+      <ul>
+        <li>Messages at 9 PM - 7 AM</li>
+        <li>More than 2 calls per day</li>
+        <li>Messages to family, friends, or coworkers</li>
+        <li>Threatening language or blackmail</li>
+        <li>Sharing your personal info publicly</li>
+        <li>Using abusive language</li>
+        <li>Threatening legal action they can't take</li>
+      </ul>
+    </div>
+
+    <h2>Red Flags (This is Illegal)</h2>
+    <div class="highlight-box">
+      <ul>
+        <li>"Hum aapka photo WhatsApp par daalen?"</li>
+        <li>"Court case karenge" (without legal capacity)</li>
+        <li>"Police ko inform karenge" (threats)</li>
+        <li>Calls at midnight or early morning</li>
+        <li>Messages in local language with abusive words</li>
+        <li>Calls asking for payment in bitcoins/unrealistic ways</li>
+      </ul>
+    </div>
+
+    <h2>Your Rights (Digital Lending Rules 2025)</h2>
+    <ol>
+      <li><strong>Right to ignore calls:</strong> No penalty for not answering</li>
+      <li><strong>Right to demand written notice:</strong> Only written demand valid</li>
+      <li><strong>Right to EMI deferment:</strong> Can request payment delay</li>
+      <li><strong>Right to complaint:</strong> Report to RBI Ombudsman</li>
+      <li><strong>Right to compensation:</strong> Get money damages</li>
+    </ol>
+
+    <h2>6-Step Complaint Process</h2>
+    <div class="success-box">
+      <p><span class="step-number">1</span> <strong>Block the number</strong> — Stop communication</p>
+      <p><span class="step-number">2</span> <strong>Save screenshots</strong> — Threatening messages/calls</p>
+      <p><span class="step-number">3</span> <strong>File cyber complaint</strong> — Go to cyber.gov.in</p>
+      <p><span class="step-number">4</span> <strong>Complaint to RBI Ombudsman</strong> — Call 14448</p>
+      <p><span class="step-number">5</span> <strong>Formal notice to lender</strong> — Demand stop + compensation</p>
+      <p><span class="step-number">6</span> <strong>Get compensation</strong> — ₹1,000-₹5,00,000</p>
+    </div>
+
+    <h2>RBI Ombudsman - Compensation Table</h2>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Type of Harassment</th>
+          <th>Typical Compensation</th>
+          <th>How to Get</th>
+        </tr>
+        <tr>
+          <td>1-2 months harassment</td>
+          <td>₹10,000 - ₹25,000</td>
+          <td>RBI Ombudsman complaint</td>
+        </tr>
+        <tr>
+          <td>3-6 months harassment</td>
+          <td>₹25,000 - ₹1,00,000</td>
+          <td>RBI complaint + police</td>
+        </tr>
+        <tr>
+          <td>6+ months + threats</td>
+          <td>₹1,00,000 - ₹5,00,000</td>
+          <td>RBI + civil court + criminal</td>
+        </tr>
+        <tr>
+          <td>Blackmail/defamation</td>
+          <td>₹2,00,000 - ₹10,00,000</td>
+          <td>Criminal court case</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>Emergency Contacts</h2>
+    <p>
+      <a href="tel:14448" class="hotline">📞 14448 - RBI Ombudsman</a>
+      <a href="tel:1930" class="hotline">📞 1930 - Cyber Crime</a>
+      <a href="tel:15100" class="hotline">📞 15100 - Legal Aid</a>
+    </p>
+  </div>
+
+  <!-- TAB 3: GST FRAUD -->
+  <div id="gst" class="tab-content">
+    <div class="breadcrumb">Home / Knowledge Base / GST Fraud Explained</div>
+    <h1>💼 GST Fraud Explained - How It Works & Penalties</h1>
+    <p class="intro">GST fraud means: fake invoices, hiding sales, claiming fake refunds, or selling without registration. Saza badi hai — 5 years jail + ₹5 lakh fine. Yeh guide samjhata hai: trap kya hai, AI kaise catch karta hai, aur safe alternatives.</p>
+
+    <h2>What Is GST Fraud? (With Numbers)</h2>
+    <div class="warning-box">
+      <h3>❌ Example 1: Fake Invoice Fraud</h3>
+      <p><strong>Scenario:</strong> Aap ₹1 lakh ka samaan khridte hain, but supplier fake invoice deta hai ₹5 lakhs ka.</p>
+      <p><strong>Problem:</strong> GST AI detects mismatch → Authorities investigation → ₹5 lakh fine minimum</p>
+      
+      <h3>❌ Example 2: Hidden Sales</h3>
+      <p><strong>Scenario:</strong> ₹50 lakh sales monthly, lekin GST return mein ₹10 lakh declare karte ho.</p>
+      <p><strong>Penalty:</strong> 5 years jail + ₹10 lakh fine + business closure</p>
+    </div>
+
+    <h2>How AI Catches GST Fraud</h2>
+    <div class="highlight-box">
+      <p><strong>GST AI System Checks:</strong></p>
+      <ol>
+        <li><strong>Invoice matching:</strong> Supplier invoice vs buyer return — must match</li>
+        <li><strong>ITC claim vs sales:</strong> If claiming ₹50L ITC but sales only ₹10L — RED FLAG</li>
+        <li><strong>Bank deposits:</strong> Bank deposits don't match GST declared sales</li>
+        <li><strong>Supplier verification:</strong> Supplier address fake or non-existent</li>
+        <li><strong>Pattern analysis:</strong> Unusual invoicing patterns = fraud</li>
+      </ol>
+    </div>
+
+    <h2>Penalties (GST Act Section 132)</h2>
+    <div class="warning-box">
+      <p><strong>Criminal Penalty:</strong></p>
+      <ul>
+        <li>✅ <strong>JAIL:</strong> Up to 5 years imprisonment</li>
+        <li>✅ <strong>FINE:</strong> ₹5,00,000 or amount involved (whichever is higher)</li>
+        <li>✅ <strong>BUSINESS CLOSURE:</strong> License suspended/cancelled</li>
+        <li>✅ <strong>CRIMINAL RECORD:</strong> Permanent record</li>
+      </ul>
+    </div>
+
+    <h2>Safe Alternatives (Legal Ways)</h2>
+    <div class="success-box">
+      <h3>✅ Correct Way to Do Business</h3>
+      <ul>
+        <li>Use VERIFIED suppliers only (check GST registration on gst.gov.in)</li>
+        <li>Match invoices EXACTLY — No fake amounts</li>
+        <li>Report actual sales in GST return</li>
+        <li>Claim ITC only for legitimate purchases</li>
+        <li>Keep all documents for 6 years</li>
+      </ul>
+    </div>
+
+    <h2>Emergency Contacts</h2>
+    <p>
+      <a href="tel:1800-103-4786" class="hotline">📞 1800-103-4786 - GST Helpline</a>
+      <a href="tel:15100" class="hotline">📞 15100 - Free Legal Aid</a>
+    </p>
+  </div>
+
+  <!-- TAB 4: CIBIL REPAIR -->
+  <div id="cibil" class="tab-content">
+    <div class="breadcrumb">Home / Knowledge Base / CIBIL Score Repair</div>
+    <h1>📊 CIBIL Score Repair - 480 to 750+ in 12 Months</h1>
+    <p class="intro">CIBIL score 480? Loans mil nahi rahe? Yeh guide bataata hai: score kya hota hai, kaise badhta hai, aur kaise 12 mahine mein 750+ tak le ja sakte ho.</p>
+
+    <h2>CIBIL Score Range Table</h2>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Score Range</th>
+          <th>Status</th>
+          <th>Loan Approval</th>
+          <th>Interest Rate</th>
+        </tr>
+        <tr>
+          <td>300-550</td>
+          <td>❌ Poor</td>
+          <td>Very difficult</td>
+          <td>15-20% (if approved)</td>
+        </tr>
+        <tr>
+          <td>550-650</td>
+          <td>⚠️ Fair</td>
+          <td>Sometimes</td>
+          <td>12-15%</td>
+        </tr>
+        <tr>
+          <td>650-750</td>
+          <td>✅ Good</td>
+          <td>Usually yes</td>
+          <td>8-10%</td>
+        </tr>
+        <tr>
+          <td>750+</td>
+          <td>✅✅ Excellent</td>
+          <td>Always</td>
+          <td>6-8% (best rates)</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>7-Step Repair Process (12 Months)</h2>
+    <div class="highlight-box">
+      <p><span class="step-number">1</span> <strong>Get your CIBIL report:</strong> Go to cibil.com, pay ₹1, get free report</p>
+      <p><span class="step-number">2</span> <strong>Check for errors:</strong> Look for: fake accounts, wrong EMI data, wrong payments marked</p>
+      <p><span class="step-number">3</span> <strong>Dispute errors:</strong> File dispute on cibil.com for each error (with proof)</p>
+      <p><span class="step-number">4</span> <strong>Pay all pending dues:</strong> Clear all outstanding loans/credit card bills</p>
+      <p><span class="step-number">5</span> <strong>Pay on time every month:</strong> Set reminders for EMI/credit card due dates</p>
+      <p><span class="step-number">6</span> <strong>Lower credit utilization:</strong> Keep credit card usage below 30% of limit</p>
+      <p><span class="step-number">7</span> <strong>Monitor monthly:</strong> Check score every month to track improvement</p>
+    </div>
+
+    <h2>Timeline: 480 → 750+ in 12 Months</h2>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Month</th>
+          <th>Actions</th>
+          <th>Expected Score</th>
+        </tr>
+        <tr>
+          <td>Month 1</td>
+          <td>Get report, clear errors, pay dues</td>
+          <td>480-520</td>
+        </tr>
+        <tr>
+          <td>Month 2-3</td>
+          <td>Pay on time, reduce CC usage</td>
+          <td>520-580</td>
+        </tr>
+        <tr>
+          <td>Month 4-6</td>
+          <td>Consistent payments, no new debt</td>
+          <td>580-650</td>
+        </tr>
+        <tr>
+          <td>Month 7-9</td>
+          <td>More on-time payments, lower utilization</td>
+          <td>650-720</td>
+        </tr>
+        <tr>
+          <td>Month 10-12</td>
+          <td>Maintain discipline, clean record</td>
+          <td>720-750+</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>Mistakes to Avoid</h2>
+    <div class="warning-box">
+      <ul>
+        <li>❌ Don't close old credit cards (hurts score)</li>
+        <li>❌ Don't apply for new loans (reduces score temporarily)</li>
+        <li>❌ Don't max out credit cards (keep below 30% usage)</li>
+        <li>❌ Don't miss even 1 payment (biggest damage)</li>
+        <li>❌ Don't dispute legitimate entries (wastes time)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TAB 5: CHEQUE BOUNCE -->
+  <div id="cheque" class="tab-content">
+    <div class="breadcrumb">Home / Knowledge Base / Cheque Bounce Law</div>
+    <h1>⚖️ NI Act Section 138: Cheque Bounce Explained</h1>
+    <p class="intro">Cheque bounce hua? Section 138 case? Jail risk? Settlement mumkin? Yeh guide samjhata hai: cheque bounce kya hota hai, kya saza hai, defenses kya hain, aur settlement kaise karte ho.</p>
+
+    <h2>What Is Section 138 NI Act?</h2>
+    <div class="highlight-box">
+      <p><strong>Simple Definition:</strong> Jab aap cheque dete ho aur bank mein funds nahi hote, toh cheque "bounce" hota hai. Yeh criminal offense hai, sirf civil nahi.</p>
+      <p><strong>Dishonored Cheque = Criminal Offense</strong></p>
+    </div>
+
+    <h2>Penalties (Very Strict)</h2>
+    <div class="warning-box">
+      <p><strong>Punishment:</strong></p>
+      <ul>
+        <li>🔒 <strong>JAIL:</strong> 1-2 years imprisonment</li>
+        <li>💰 <strong>FINE:</strong> Up to cheque amount + additional fine</li>
+        <li>⚖️ <strong>BOTH:</strong> Jail AND fine</li>
+        <li>❌ <strong>CRIMINAL RECORD:</strong> Will show on background check</li>
+      </ul>
+    </div>
+
+    <h2>Bail Availability</h2>
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Amount</th>
+          <th>Bail Possible?</th>
+          <th>Typical Terms</th>
+        </tr>
+        <tr>
+          <td>&lt; ₹1 lakh</td>
+          <td>✅ Usually yes</td>
+          <td>Own recognizance or surety</td>
+        </tr>
+        <tr>
+          <td>₹1L - ₹5L</td>
+          <td>✅ Yes</td>
+          <td>Bail amount set by magistrate</td>
+        </tr>
+        <tr>
+          <td>&gt; ₹5L</td>
+          <td>⚠️ Difficult</td>
+          <td>Depends on court & circumstances</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2>5 Legal Defenses (With Success Rates)</h2>
+    <div class="success-box">
+      <p><span class="step-number">1</span> <strong>Post-dated cheque:</strong> "It was for future date" — Success rate: 60%</p>
+      <p><span class="step-number">2</span> <strong>Payment already made:</strong> Proof of alternative payment — Success rate: 75%</p>
+      <p><span class="step-number">3</span> <strong>Cheque issued for loan repayment:</strong> With agreement proof — Success rate: 50%</p>
+      <p><span class="step-number">4</span> <strong>Bank error:</strong> Bank processing issue — Success rate: 40%</p>
+      <p><span class="step-number">5</span> <strong>Illegitimate demand:</strong> Cheque issued under duress/fraud — Success rate: 30%</p>
+    </div>
+
+    <h2>6-Step Settlement Process</h2>
+    <div class="highlight-box">
+      <p><span class="step-number">1</span> <strong>Immediate action:</strong> Pay full amount to complainant ASAP</p>
+      <p><span class="step-number">2</span> <strong>Get written settlement:</strong> "Cheque bounce settled, case to be withdrawn"</p>
+      <p><span class="step-number">3</span> <strong>File withdrawal petition:</strong> Court mein case withdraw karne ke liye arzi</p>
+      <p><span class="step-number">4</span> <strong>Magistrate approval:</strong> Court settlement ko accept kare</p>
+      <p><span class="step-number">5</span> <strong>Case dismissal:</strong> Court orders case withdrawn</p>
+      <p><span class="step-number">6</span> <strong>Get discharge:</strong> Court discharge deta hai, no criminal record</p>
+    </div>
+
+    <h2>Prevention Tips</h2>
+    <div class="success-box">
+      <ul>
+        <li>✅ Always ensure sufficient funds before issuing cheque</li>
+        <li>✅ Issue cheque only after payment confirmed</li>
+        <li>✅ Keep detailed records of all cheques issued</li>
+        <li>✅ Use cheques only for legitimate business transactions</li>
+        <li>✅ Maintain healthy bank balance always</li>
+      </ul>
+    </div>
+
+    <h2>Emergency Contacts</h2>
+    <p>
+      <a href="tel:15100" class="hotline">📞 15100 - Free Legal Aid</a>
+      <a href="tel:14448" class="hotline">📞 14448 - RBI Help</a>
+    </p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-section">
+      <h4>📚 Legal Guides</h4>
+      <ul>
+        <li><a href="https://haqse.org.in/">Home</a></li>
+        <li><a href="https://haqse.org.in/">Knowledge Base</a></li>
+        <li><a href="mailto:support@haqse.org.in?subject=HaqSe Support Query">📧 Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>⚖️ Emergency Hotlines</h4>
+      <ul>
+        <li>Legal Aid: <a href="tel:15100">15100</a></li>
+        <li>RBI Ombudsman: <a href="tel:14448">14448</a></li>
+        <li>Cyber Crime: <a href="tel:1930">1930</a></li>
+        <li><a href="mailto:support@haqse.org.in?subject=HaqSe Support">📧 Email Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="disclaimer-footer">
+    <p><strong>⚖️ LEGAL DISCLAIMER:</strong> HaqSe provides legal awareness for educational purposes only. It is NOT professional legal advice. Laws vary by state and change frequently. For your specific legal situation, you MUST consult a qualified lawyer.</p>
+    <p><strong>TERMS OF USE:</strong> By using HaqSe, you agree that: (1) Content is for awareness only, (2) We're not liable for outcomes, (3) You consult lawyers for actual cases, (4) You use this at your own risk.</p>
+    <p><strong>PRIVACY:</strong> We don't collect personal data. Your questions go to Claude AI (Anthropic). Google Analytics tracks anonymous traffic. Google AdSense uses cookies for ads. <a href="mailto:support@haqse.org.in" style="color: #FFB74D;">Email us</a> for privacy inquiries.</p>
+  </div>
+
+  <div class="footer-bottom">
+    <p>🇮🇳 <strong style="color: #FFB74D;">HaqSe</strong> — Free Legal Awareness Platform</p>
+    <p>© 2026 HaqSe. All rights reserved. | Last Updated: June 28, 2026 | <a href="mailto:support@haqse.org.in" style="color: #FFB74D;">Contact</a></p>
+  </div>
+</footer>
+
+<!-- TAB SWITCHING JAVASCRIPT -->
+<script>
+function openTab(evt, tabName) {
+  // Hide all tab contents
+  var i, tabcontent;
+  tabcontent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("active");
+  }
+
+  // Remove active class from all tab buttons
+  var tabbuttons;
+  tabbuttons = document.getElementsByClassName("tab-button");
+  for (i = 0; i < tabbuttons.length; i++) {
+    tabbuttons[i].classList.remove("active");
+  }
+
+  // Show the current tab and mark button as active
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+
+// Initialize on page load
+window.addEventListener('DOMContentLoaded', function() {
+  // Make sure first tab is active
+  var firstTab = document.getElementById("police");
+  if (firstTab) {
+    firstTab.classList.add("active");
+  }
+  var firstButton = document.querySelector(".tab-button");
+  if (firstButton) {
+    firstButton.classList.add("active");
+  }
+});
+</script>
+
+</body>
+</html>

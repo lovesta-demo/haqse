@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Schemes & Contact Authority - HaqSe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px 0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #FF8C00;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .schemes-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .scheme-tab {
+            padding: 12px 15px;
+            background: #2a2a4e;
+            color: white;
+            border: 2px solid #FF8C00;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .scheme-tab:hover {
+            background: #FF8C00;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .scheme-tab.active {
+            background: #FF8C00;
+            color: white;
+            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+        }
+
+        .scheme-content {
+            display: none;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .scheme-content.active {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .scheme-title {
+            font-size: 1.8rem;
+            color: #FF8C00;
+            margin-bottom: 10px;
+        }
+
+        .scheme-description {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-weight: 600;
+            border-left: 4px solid #FF8C00;
+            padding-left: 12px;
+        }
+
+        .central-info {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #FF8C00;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin-bottom: 12px;
+            align-items: start;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #1a1a2e;
+            font-size: 0.95rem;
+        }
+
+        .info-value {
+            color: #555;
+            word-break: break-word;
+        }
+
+        .info-value a {
+            color: #FF8C00;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .state-selector {
+            margin-bottom: 20px;
+        }
+
+        .state-selector label {
+            display: block;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .state-selector select {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            border: 2px solid #FF8C00;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: white;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .state-selector select:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 140, 0, 0.3);
+        }
+
+        .state-info {
+            background: #fff8f0;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #FF8C00;
+            margin-top: 15px;
+        }
+
+        .state-info h4 {
+            color: #FF8C00;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .loading {
+            text-align: center;
+            color: #666;
+            padding: 40px 20px;
+            font-size: 1.1rem;
+        }
+
+        .error {
+            background: #fee;
+            color: #c33;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #c33;
+        }
+
+        .help-text {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            color: #333;
+            margin-top: 20px;
+            border-left: 4px solid #2a5caf;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .schemes-nav {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .scheme-tab {
+                font-size: 0.8rem;
+                padding: 10px 12px;
+            }
+
+            .scheme-content {
+                padding: 20px;
+            }
+
+            .info-row {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .state-selector select {
+                max-width: 100%;
+            }
+        }
+
+        .divider {
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+
+        .no-data {
+            text-align: center;
+            color: #999;
+            padding: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏛️ Government Schemes & Authorities</h1>
+            <p>Direct contact information for central & state implementation offices</p>
+        </div>
+
+        <div class="schemes-nav" id="schemesTabs"></div>
+
+        <div id="schemesContent"></div>
+
+        <div class="help-text">
+            <strong>💡 How to use:</strong> Click on any scheme tab to view central ministry contact details. Use the state dropdown to find your state's nodal officer and district coordinator. All information is official and regularly updated.
+        </div>
+    </div>
+
+    <script>
+        let schemes = [];
+        let currentScheme = 0;
+
+        // Load JSON data
+        async function loadSchemes() {
+            try {
+                const response = await fetch('./data/government-schemes.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                schemes = data.schemes;
+                renderTabs();
+                renderSchemeContent(0);
+            } catch (error) {
+                console.error('Error loading schemes:', error);
+                document.getElementById('schemesContent').innerHTML = 
+                    '<div class="error">Unable to load schemes data. Please ensure government-schemes.json is in the /data folder.</div>';
+            }
+        }
+
+        // Render scheme tabs
+        function renderTabs() {
+            const tabsContainer = document.getElementById('schemesTabs');
+            tabsContainer.innerHTML = schemes.map((scheme, index) => `
+                <button class="scheme-tab ${index === 0 ? 'active' : ''}" onclick="switchScheme(${index})">
+                    ${scheme.name.split('(')[0].trim()}
+                </button>
+            `).join('');
+        }
+
+        // Switch active scheme
+        function switchScheme(index) {
+            currentScheme = index;
+            document.querySelectorAll('.scheme-tab').forEach((tab, i) => {
+                tab.classList.toggle('active', i === index);
+            });
+            renderSchemeContent(index);
+        }
+
+        // Render scheme content
+        function renderSchemeContent(index) {
+            const scheme = schemes[index];
+            const contentContainer = document.getElementById('schemesContent');
+
+            let statesOptions = '<option value="">Select Your State</option>';
+            if (scheme.states) {
+                Object.keys(scheme.states).forEach(stateCode => {
+                    statesOptions += `<option value="${stateCode}">${scheme.states[stateCode].state}</option>`;
+                });
+            }
+
+            let stateInfoHTML = '<div class="no-data">Select a state from the dropdown above to view nodal officer and district coordinator details.</div>';
+
+            const content = `
+                <div class="scheme-content active">
+                    <h2 class="scheme-title">${scheme.name}</h2>
+                    <div class="scheme-description">${scheme.shortDesc}</div>
+
+                    <div class="content-section">
+                        <h3 class="section-title">🏢 Central Ministry Contact</h3>
+                        <div class="central-info">
+                            <div class="info-row">
+                                <div class="info-label">Ministry:</div>
+                                <div class="info-value">${scheme.central.ministry}</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Portal:</div>
+                                <div class="info-value"><a href="${scheme.central.portal}" target="_blank">${scheme.central.portal}</a></div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Helpline:</div>
+                                <div class="info-value"><strong>${scheme.central.helpline}</strong></div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Email:</div>
+                                <div class="info-value"><a href="mailto:${scheme.central.email}">${scheme.central.email}</a></div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Contact:</div>
+                                <div class="info-value">${scheme.central.contactPerson} <br> <small>${scheme.central.designation}</small></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="content-section">
+                        <h3 class="section-title">🌍 State-Wise Implementation</h3>
+                        <div class="state-selector">
+                            <label for="stateSelect">Select Your State:</label>
+                            <select id="stateSelect" onchange="updateStateInfo(${index}, this.value)">
+                                ${statesOptions}
+                            </select>
+                        </div>
+                        <div id="stateInfoContent">${stateInfoHTML}</div>
+                    </div>
+                </div>
+            `;
+
+            contentContainer.innerHTML = content;
+        }
+
+        // Update state-specific info
+        function updateStateInfo(schemeIndex, stateCode) {
+            const scheme = schemes[schemeIndex];
+            const stateInfoContainer = document.getElementById('stateInfoContent');
+
+            if (!stateCode || !scheme.states[stateCode]) {
+                stateInfoContainer.innerHTML = '<div class="no-data">Select a state from the dropdown above to view nodal officer and district coordinator details.</div>';
+                return;
+            }
+
+            const stateData = scheme.states[stateCode];
+            const html = `
+                <div class="state-info">
+                    <h4>${stateData.state} - ${scheme.name}</h4>
+                    <div class="info-row">
+                        <div class="info-label">Nodal Officer:</div>
+                        <div class="info-value">${stateData.nodalOfficer}</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Designation:</div>
+                        <div class="info-value">${stateData.designation}</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Phone:</div>
+                        <div class="info-value"><strong>${stateData.phone}</strong></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Email:</div>
+                        <div class="info-value"><a href="mailto:${stateData.email}">${stateData.email}</a></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">State Portal:</div>
+                        <div class="info-value"><a href="${stateData.statePortal}" target="_blank">${stateData.statePortal}</a></div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="info-label">District Coordinator:</div>
+                        <div class="info-value">${stateData.districtCoordinator}</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Contact:</div>
+                        <div class="info-value"><strong>${stateData.coordinatorPhone}</strong></div>
+                    </div>
+                </div>
+            `;
+            stateInfoContainer.innerHTML = html;
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', loadSchemes);
+    </script>
+</body>
+</html>
